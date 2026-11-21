@@ -1,0 +1,6 @@
+{
+  "name": "RentRide — Online Vehicle Rental Platform",
+  "description": "Full-stack vehicle rental marketplace and fleet operations console with real-time availability, KYC verification, instant pricing breakdown, and booking lifecycle management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

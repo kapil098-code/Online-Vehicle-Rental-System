@@ -1,93 +1,20 @@
-# Online Vehicle Rental System
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-MCA 3rd Semester project: React + Vite frontend, Node.js + Express REST API, MySQL database.
+# Run and deploy your AI Studio app
 
-## Setup
+This contains everything you need to run your app locally.
 
-Requirements: Node.js 18+, MySQL 8+
+View your app in AI Studio: https://ai.studio/apps/dff172a3-9f1b-4248-8a7b-6e2901fde001
 
-### 1. Backend
+## Run Locally
 
-```bash
-cd backend
-```
+**Prerequisites:**  Node.js
 
-Copy `.env.example` to `.env` and fill in `DB_PASSWORD` and `JWT_SECRET`.
 
-```bash
-npm install
-npm run setup
-npm run dev
-```
-
-API runs at `http://localhost:5000`.
-
-### 2. Frontend
-
-Open a new terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open `http://localhost:5173`.
-
-## Demo Logins
-
-Created by `npm run setup`:
-
-- **Admin:** `admin@rental.com` / `Admin@123`
-- **Customer:** `customer@rental.com` / `Customer@123`
-
-Change demo credentials before using the application in a public production environment.
-
-## Upgrading an Existing Database (ID Verification)
-
-```bash
-cd backend
-npm run migrate
-```
-
-This adds the new user columns; existing users are marked Approved.
-
-## Features
-
-- ID verification: signup needs a Driving Licence / Aadhaar photo (stored privately); admin approves or rejects; only approved customers can book.
-- Register / login (bcrypt + JWT), role-based access (customer, admin); role can never be set from the signup form.
-- Search and filter vehicles: name, category, transmission, fuel, location, price range, and free-for-dates.
-- Booking with a date-overlap check inside a database transaction (row lock) - no double booking.
-- Server-side cost: total_cost = days x price_per_day.
-- Payment placeholder: Cash on Pickup or Simulated Online.
-- Customer dashboard with cancellation.
-- Admin dashboard: stats, add/edit/remove vehicles, view/filter bookings, and update booking status.
-
-## Folder Structure
-
-```text
-backend/
-  server.js
-  scripts/
-  src/
-    config/
-    controllers/
-    middleware/
-    models/
-    routes/
-    utils/
-
-frontend/
-  src/
-    components/
-    context/
-    pages/
-    pages/admin/
-
-database/
-  schema.sql
-
-docs/
-  api-list.md
-  er-and-dfd.md
-```
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
